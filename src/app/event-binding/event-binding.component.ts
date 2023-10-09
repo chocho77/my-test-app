@@ -4,8 +4,12 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-event-binding',
   template: `
            <h2>Welcome {{name}}</h2>
-          <button (click)="onClick()">Greet</button>
+          <button (click)="onClick($event)">Greet</button>
           {{greeting}}
+          <button (click)="greeting='Welcome Chavdar!'">Greet</button>
+          <input #myInput type="text"/>
+          <button (click)="logMessage(myInput)">Log</button>
+
           `,
   styles: []
 })
@@ -21,9 +25,14 @@ export class EventBindingComponent implements OnInit{
     
   }
 
-  onClick():void {
-    console.log('Welcome to Codevolution!');
-    this.greeting = 'Welcome to Codevolution.';
+  onClick(event: any):void {
+    //console.log(event);
+    this.greeting = event.type;
+  }
+
+  logMessage(value: any):void{
+    console.log(value);
+
   }
 
 
