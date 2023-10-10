@@ -1,6 +1,7 @@
 <div style="text-align: center">
 <h1>
-  Welcome to {{title}} !
+  {{message}}
   </h1>
-   <app-struct-directives></app-struct-directives>
+   <app-struct-directives (childEvent)="message=$event" [parentData]="name"></app-struct-directives>
+   <app-pipes-comp></app-pipes-comp>
 </div>

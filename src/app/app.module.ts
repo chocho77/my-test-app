@@ -8,6 +8,7 @@ import { TestComponent } from './test/test.component';
 import { StyleBindingComponent } from './style-binding/style-binding.component';
 import { EventBindingComponent } from './event-binding/event-binding.component';
 import { StructDirectivesComponent } from './struct-directives/struct-directives.component';
+import { PipesCompComponent } from './pipes-comp/pipes-comp.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { StructDirectivesComponent } from './struct-directives/struct-directives
     TestComponent,
     StyleBindingComponent,
     EventBindingComponent,
-    StructDirectivesComponent
+    StructDirectivesComponent,
+    PipesCompComponent
   ],
   imports: [
     BrowserModule,

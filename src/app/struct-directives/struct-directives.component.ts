@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-struct-directives',
@@ -34,6 +34,9 @@ import { Component, OnInit } from '@angular/core';
             <h2>{{i}} {{color}}</h2>
           </div>
 
+          <h2>{{"Hello " + name}}</h2>
+          <button (click)="fireEvent()">Send Event</button>
+
 
    `,
   styles: []
@@ -43,6 +46,8 @@ export class StructDirectivesComponent implements OnInit{
   displayName = true;
   public color = "black";
   public colors = ["red", "blue", "green", "yellow"];
+  @Input('parentData') public name:any;
+  @Output() public childEvent = new EventEmitter(); 
 
   constructor(){
 
@@ -50,6 +55,10 @@ export class StructDirectivesComponent implements OnInit{
 
   ngOnInit(): void {
     
+  }
+
+  fireEvent(){
+    this.childEvent.emit('Hey, Codevolution!');
   }
 
 }
