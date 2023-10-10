@@ -9,6 +9,8 @@ import { Component, OnInit } from '@angular/core';
           <button (click)="greeting='Welcome Chavdar!'">Greet</button>
           <input #myInput type="text"/>
           <button (click)="logMessage(myInput)">Log</button>
+          <input [(ngModel)]="fname" type="text">
+          {{fname}}
 
           `,
   styles: []
@@ -16,6 +18,7 @@ import { Component, OnInit } from '@angular/core';
 export class EventBindingComponent implements OnInit{
   public name:String = "Chavdar" + " !";
   public greeting = "";
+  public fname = "";
 
   constructor(){
 
