@@ -9,7 +9,9 @@ import { StyleBindingComponent } from './style-binding/style-binding.component';
 import { EventBindingComponent } from './event-binding/event-binding.component';
 import { StructDirectivesComponent } from './struct-directives/struct-directives.component';
 import { PipesCompComponent } from './pipes-comp/pipes-comp.component';
-
+import { EmployeeListComponent } from './employee-list/employee-list.component';
+import { EmployeeDetailComponentComponent } from './employee-detail-component/employee-detail-component.component';
+import { TestComponentComponent } from './test-component/test-component.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,7 +19,10 @@ import { PipesCompComponent } from './pipes-comp/pipes-comp.component';
     StyleBindingComponent,
     EventBindingComponent,
     StructDirectivesComponent,
-    PipesCompComponent
+    PipesCompComponent,
+    EmployeeListComponent,
+    EmployeeDetailComponentComponent,
+    TestComponentComponent
   ],
   imports: [
     BrowserModule,
